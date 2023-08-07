@@ -10,6 +10,17 @@ export const Overlay = styled.div`
   background-color: ${Colors.overlay};
   opacity: 0.7;
 `
+export const Button = styled.button`
+  max-width: 344px;
+  width: 100%;
+  height: 24px;
+  color: ${Colors.textPrimary};
+  font-size: 14px;
+  font-weight: bold;
+  border: none;
+  background-color: ${Colors.backgroundButtonProduct};
+  margin-bottom: 8px;
+`
 
 export const Container = styled.div`
   max-width: 100vw;
@@ -47,6 +58,26 @@ export const Aside = styled.aside`
 
   li {
     margin-bottom: 16px;
+  }
+
+  h3 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: bolder;
+    color: ${Colors.textSecondary};
+    margin-left: 8px;
+  }
+
+  > ${Button} {
+    margin: 0 8px;
+  }
+  > p {
+    line-height: 22px;
+    font-size: 14px;
+    height: 286px;
+    margin-bottom: 24px;
+    color: ${Colors.textSecondary};
+    padding: 0 8px;
   }
 `
 export const Order = styled.div`
@@ -112,14 +143,57 @@ export const FinalOrder = styled.div`
       color: ${Colors.textSecondary};
     }
   }
-  button {
-    width: 344px;
+`
+
+export const Form = styled.form`
+  width: 100%;
+  padding: 8px;
+  display: block;
+  margin-bottom: 8px;
+
+  .margin-top {
+    margin-top: 24px;
+  }
+`
+export const InpuGroup = styled.div`
+  display: block;
+  margin: 8px 0;
+
+  input {
     width: 100%;
-    height: 24px;
-    color: ${Colors.textPrimary};
+    height: 32px;
+    border-color: transparent;
+    background-color: ${Colors.backgroundButtonProduct};
+    margin-top: 8px;
+    border: 3px solid transparent;
+  }
+
+  label {
+    color: ${Colors.textSecondary};
     font-size: 14px;
     font-weight: bold;
-    border: none;
-    background-color: ${Colors.backgroundButtonProduct};
+  }
+
+  .error {
+    border-color: red;
+  }
+`
+
+export const Row = styled.div`
+  display: grid;
+  column-gap: 34px;
+  align-items: flex-end;
+  grid-template-columns: 1fr 1fr;
+  input{
+    margin 0px;
+  }
+`
+export const RowCard = styled.div`
+  display: grid;
+  column-gap: 30px;
+  align-items: flex-end;
+  grid-template-columns: 228px 87px;
+  &.custom {
+    grid-template-columns: 1fr 1fr;
   }
 `

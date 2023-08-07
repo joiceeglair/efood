@@ -1,21 +1,23 @@
 import facebook from '../../assets/icon/icon-facebook.svg'
 import instagram from '../../assets/icon/icon-instagram.svg'
-import twitter from '../../assets/icon/twitter-2-svgrepo-com.svg'
 import logoEfood from '../../assets/Logo-Efood/logo-efood.svg'
+import twitter from '../../assets/icon/twitter-2-svgrepo-com.svg'
 import { FooterContainer, LinkFooter } from './styled'
 
 export default function Footer() {
   return (
     <FooterContainer>
-      <img src={logoEfood} alt="efood" />
+      <a href="/">
+        <img src={logoEfood} alt="efood" />
+      </a>
       <nav>
-        <LinkFooter href="https://www.instagram.com/">
+        <LinkFooter href="https://www.instagram.com/" target="_blank">
           <img src={instagram} alt="instagram" />
         </LinkFooter>
-        <LinkFooter href="https://web.facebook.com/">
+        <LinkFooter href="https://web.facebook.com/" target="_blank">
           <img src={facebook} alt="facebook" />
         </LinkFooter>
-        <LinkFooter href="https://twitter.com/">
+        <LinkFooter href="https://twitter.com/" target="_blank">
           <img src={twitter} alt="twitter" />
         </LinkFooter>
       </nav>
@@ -23,7 +25,9 @@ export default function Footer() {
         A efood é uma plataforma para divulgação de estabelecimentos, a
         responsabilidade pela entrega, qualidade dos produtos é toda do
         estabelecimento contratado.
-      </p>
+      </p>{' '}
+      <br />
+      <p>&copy; 2023, Todos os direitos reservados. Jailson Joventino</p>
     </FooterContainer>
   )
 }
